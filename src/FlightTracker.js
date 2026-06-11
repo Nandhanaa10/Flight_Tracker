@@ -82,7 +82,7 @@ export default function FlightTracker() {
   useEffect(() => {
     if (!position) return
     const fetchFlights = () => {
-      fetch(`http://192.168.0.3:8000/flights?lat=${position.lat}&lng=${position.lng}`)
+      fetch(`https://golden-flight-tracker.onrender.com/flights?lat=${position.lat}&lng=${position.lng}`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data)
